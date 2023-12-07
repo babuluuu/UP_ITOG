@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #7aabc2;
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+
+}
+
+h1{
+    text-align: center;
+    font-family: cursive;
+    color: darkblue;
+}
+
+header {
+    background-color: #333;
+    color: #863535;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item {
+    background-color: #9f84ad;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.grid-item h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #040e0e;
+    font-weight: bold;
+}
+
+button {
+    background-color: #007bff;
+    color: #7398a6;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.new-user-form {
+    background-color: #6e3d3d;
+    padding: 20px;
+    border: 1px solid #d00b0b;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.new-user-form p {
+    margin: 10px 0;
+}
+
+.new-user-form input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #280e0e;
+    border-radius: 3px;
+}
+
+.new-user-form button[type="submit"] {
+    background-color: #99a7b6;
+    color: #a82727;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.new-user-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.new-user-form input[type="submit"] {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.new-user-form input[type="submit"]:hover {
+    background-color: #c82333;
+}

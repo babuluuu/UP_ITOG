@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author List</title>
+</head>
+<body>
+<h2>Author List</h2>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Вывод данных администраторов -->
+    <tr th:each="author : ${authors}">
+        <td th:text="${author.id}"></td>
+        <td th:text="${author.name}"></td>
+
+
+        <td>
+            <a th:href="@{/authors/update/{id}(id=${author.id})}">Update</a>
+            <a th:href="@{/authors/delete/{id}(id=${author.id})}">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<a href="/authors/create">Create Author</a>
+</body>
+</html>

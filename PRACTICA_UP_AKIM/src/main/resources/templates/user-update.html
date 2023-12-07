@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update User</title>
+</head>
+<body>
+<h2>Update User</h2>
+<form action="/users/update" method="post" th:object="${user}">
+    <input type="hidden" th:field="*{user_id}"/>
+    Login: <input type="text" th:field="*{login}" required/><br/>
+    Password: <input type="password" th:field="*{password}" required/><br/>
+    Role: <input type="text" th:field="*{role}" required/><br/>
+    <input type="submit" value="Update"/>
+</form>
+<br/>
+<a href="/users">Back to User List</a>
+</body>
+</html>

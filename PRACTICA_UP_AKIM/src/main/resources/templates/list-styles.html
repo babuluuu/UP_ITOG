@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Style List</title>
+</head>
+<body>
+<h2>Style List</h2>
+<table border="1">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="style : ${styles}">
+    <td th:text="${style.id}"></td>
+    <td th:text="${style.name}"></td>
+    <td>
+      <a th:href="@{/styles/{id}(id=${style.id})}">Details</a>
+      |
+      <a th:href="@{/styles/{id}/edit(id=${style.id})}">Edit</a>
+      |
+      <a th:href="@{/styles/{id}/delete(id=${style.id})}">Delete</a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<br/>
+<a href="/styles/create">Create New Style</a>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Price</title>
+</head>
+<body>
+<h2>Edit Price</h2>
+<form action="/prices" method="post" th:object="${price}">
+    <input type="hidden" th:field="*{id}">
+    <label>Price: <input type="text" th:field="*{name}" required></label>
+    <button type="submit">Save</button>
+</form>
+<br/>
+<a href="/prices">Back to Price List</a>
+</body>
+</html>

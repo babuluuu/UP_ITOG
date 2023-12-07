@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Tattoo Type List</title>
+</head>
+<body>
+<h2>Tattoo Type List</h2>
+<table border="1">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Type Name</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="tattooType : ${tattooTypes}">
+    <td th:text="${tattooType.id}"></td>
+    <td th:text="${tattooType.typeName}"></td>
+    <td>
+      <a th:href="@{/tattoo-types/{id}(id=${tattooType.id})}">Details</a>
+      |
+      <a th:href="@{/tattoo-types/{id}/edit(id=${tattooType.id})}">Edit</a>
+      |
+      <a th:href="@{/tattoo-types/{id}/delete(id=${tattooType.id})}">Delete</a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<br/>
+<a href="/tattoo-types/create">Create New Tattoo Type</a>
+</body>
+</html>

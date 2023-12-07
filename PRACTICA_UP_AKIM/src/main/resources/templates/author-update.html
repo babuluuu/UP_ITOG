@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Author</title>
+</head>
+<body>
+<h2>Update Admin</h2>
+<form action="/authors/update" method="post" th:object="${author}">
+    <input type="hidden" th:field="*{id}"/>
+    Login: <input type="text" th:field="*{name}" required/><br/>
+    <input type="submit" value="Update"/>
+</form>
+<br/>
+<a href="/authors">Back to Author List</a>
+</body>
+</html>

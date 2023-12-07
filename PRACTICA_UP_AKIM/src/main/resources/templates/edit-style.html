@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Style</title>
+</head>
+<body>
+<h2>Edit Style</h2>
+<form action="/styles" method="post" th:object="${style}">
+  <input type="hidden" th:field="*{id}">
+  <label>Name: <input type="text" th:field="*{name}" required></label>
+  <button type="submit">Save</button>
+</form>
+<br/>
+<a href="/styles">Back to Style List</a>
+</body>
+</html>

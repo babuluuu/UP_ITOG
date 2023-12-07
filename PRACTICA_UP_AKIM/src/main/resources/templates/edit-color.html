@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Color</title>
+</head>
+<body>
+<h2>Edit Color</h2>
+<form action="/colors" method="post" th:object="${color}">
+  <input type="hidden" th:field="*{id}">
+  <label>Name: <input type="text" th:field="*{name}" required></label>
+  <button type="submit">Save</button>
+</form>
+<br/>
+<a href="/colors">Back to Color List</a>
+</body>
+</html>

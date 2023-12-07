@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create User</title>
+</head>
+<body>
+<h2>Create User</h2>
+<form action="/users/create" method="post" th:object="${user}">
+    Login: <input type="text" th:field="*{login}" required/><br/>
+    Password: <input type="text" th:field="*{password}" required/><br/>
+    Role: <select th:field="*{role}" required>
+    <option value="user">User</option>
+    <option value="admin">Admin</option>
+    <option value="employee">Employee</option>
+</select><br/>
+    <input type="submit" value="Create"/>
+</form>
+<br/>
+<a href="/users">Back to User List</a>
+</body>
+</html>

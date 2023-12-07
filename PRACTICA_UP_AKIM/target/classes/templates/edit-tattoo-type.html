@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Tattoo Type</title>
+</head>
+<body>
+<h2>Edit Tattoo Type</h2>
+<form action="/tattoo-types" method="post" th:object="${tattooType}">
+  <input type="hidden" th:field="*{tattooType.id}">
+  <label>Type Name: <input type="text" th:field="*{tattooType.typeName}" required></label>
+  <button type="submit">Save</button>
+</form>
+<br/>
+<a href="/tattoo-types">Back to Tattoo Type List</a>
+</body>
+</html>

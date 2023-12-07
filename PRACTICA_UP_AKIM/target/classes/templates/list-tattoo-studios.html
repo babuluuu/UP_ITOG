@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Tattoo Studios</title>
+</head>
+<body>
+<h2>Tattoo Studios</h2>
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Actions</th>
+  </tr>
+  <tr th:each="tattooStudio : ${tattooStudios}">
+    <td th:text="${tattooStudio.id}"></td>
+    <td th:text="${tattooStudio.studioName}"></td>
+    <td th:text="${tattooStudio.location}"></td>
+    <td>
+      <a th:href="@{'/tattoo-studios/' + ${tattooStudio.id}}">Details</a>
+      |
+      <a th:href="@{'/tattoo-studios/' + ${tattooStudio.id} + '/edit'}">Edit</a>
+      |
+      <a th:href="@{'/tattoo-studios/' + ${tattooStudio.id} + '/delete'}">Delete</a>
+    </td>
+  </tr>
+</table>
+<br>
+<a href="/tattoo-studios/create">Create New Tattoo Studio</a>
+</body>
+</html>
